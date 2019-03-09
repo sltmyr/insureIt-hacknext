@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>InsureIT!</title>
+
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+    <!-- Styles -->
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.11.2/css/alertify.css">
+    
+
+    <!-- include boostrap theme  -->
+
+    <!-- include alertify script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.11.2/alertify.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <style>
+        .wrapper {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .signature-pad {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+        <div class="nano">
+            <div class="nano-content">
+                <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>InsureIT</span></a></div>
+                <ul>
+                    <li class="label">Account Details</li>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Active Accounts <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Enquiry </a>
+                            <li><a class="sidebar-sub-toggle active" href='transactions.html'><i class="ti-home"></i> Transactions</a>
+                                <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Others<span class="sidebar-collapse-icon ti-angle-down"></span> </a>
+
+                                </li>
+
+                                <li class="label">Funds Transfer</li>
+
+                                <li><a href="app-event-calender.html"><i class="ti-calendar"></i> Open Deposits </a></li>
+                                <li><a href="app-email.html"><i class="ti-email"></i> Online Requests<span class="sidebar-collapse-icon ti-angle-down"></span></a></li>
+                                <li class="label">Tax and External Paymentts</li>
+
+                                <li><a class="sidebar-sub-toggle"><i class="ti-layout-grid4-alt"></i> Tax and Liability <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                                </li>
+                                <li><a class="sidebar-sub-toggle"><i class="ti-layout-grid4-alt"></i> Scheduled Payments <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                                </li>
+                                <li><a class="sidebar-sub-toggle"><i class="ti-layout-grid4-alt"></i> Pending Orders </a>
+
+                                </li>
+                                <li class="label">Contact Us</li>
+                                <li><a href="form-basic.html"><i class="ti-view-list-alt"></i> Help Form </a></li>
+                                <li><a href="form-basic.html"><i class="ti-view-list-alt"></i> Manage Account </a></li>
+                                <li><a href="form-basic.html"><i class="ti-view-list-alt"></i> Change Password </a></li>
+                                <li><a href="form-basic.html"><i class="ti-view-list-alt"></i> Virtual Assistant </a></li>
+                                <li class="label">Extra</li>
+                                <li><a class="sidebar-sub-toggle"><i class="ti-files"></i> Insurance Services <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                                </li>
+                                <li><a class="sidebar-sub-toggle"><i class="ti-file"></i> Insurance history <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+
+                                </li>
+                                <li><a href="../documentation/index.html"><i class="ti-file"></i> Fund Services</a></li>
+                                <li><a><i class="ti-close"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /# sidebar -->
+
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="float-left">
+                        <div class="hamburger sidebar-toggle">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="float-right">
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="ti-bell"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">Recent Notifications</span>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                        <div class="notification-heading">Mr. John</div>
+                                                        <div class="notification-text">5 members joined today </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                        <div class="notification-heading">Tasnim</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                    </div>
+                                                </a>
+
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <i class="ti-email"></i>
+                                <div class="drop-down dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span class="text-left">2 New Messages</span>
+                                        <a href="email.html">
+                                            <i class="ti-pencil-alt pull-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/1.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                        <div class="notification-heading">Michael Qin</div>
+                                                        <div class="notification-text">Hi Teddy, Your insruance policy is ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="notification-unread">
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                        <div class="notification-heading">Mr. John</div>
+                                                        <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                        <div class="notification-heading">Michael Qin</div>
+                                                        <div class="notification-text">Hi Teddy, Your collateral damage ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                                                    <div class="notification-content">
+                                                        <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                        <div class="notification-heading">Mr. John</div>
+                                                        <div class="notification-text">Hi Teddy, our customer support is ...</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="text-center">
+                                                <a href="#" class="more-link">See All</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">Florian
+                                    <i class="ti-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+
+                                    <div class="dropdown-content-body">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-user"></i>
+                                                    <span>Profile</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-email"></i>
+                                                    <span>Inbox</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-settings"></i>
+                                                    <span>Setting</span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-lock"></i>
+                                                    <span>Lock Screen</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-power-off"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-r-0 title-margin-right">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>Just some last steps</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="card">
+                            <div class="stat-widget-one">
+                                <div class="stat-icon dib"><i class="ti-user color-primary border-primary"></i></div>
+                                <div class="stat-content dib">
+                                    <div class="stat-text">MeinHausHalt(Recommended Plan)</div>
+                                    <div class="stat-digit">6.5 € / Month</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /# row -->
+                <section id="main-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+
+                                        <div class="col-lg-12">
+                                            </br>
+                                            <h4 class="card-title">Exclusive benefits of choosing Allianz MeinHaushalt </h4>
+                                            </br>
+
+                                            <ul class="list-icons">
+                                                <li><a href="javascript:void(0)"><i class="fa fa-check text-info"></i> Worldwide protection against bicycle theft (24/7!)</a></li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-check text-info"></i> For all bicycles in the household incl. bicycle trailer</a></li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-check text-info"></i> Also for rented and borrowed bicycles (e.g. hotel) </a></li>
+
+                                                <li><a href="javascript:void(0)"><i class="fa fa-check text-info"></i> CUp to 1.000 EUR incl. Pedelecs/E-Bike</a></li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-check text-info"></i> (max. 25 km/h with and without starting aid, if no registration requirement exists)</a></li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-check text-info"></i> Collision Damage Waiver </a></li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-12">
+                                            <br>
+                                            <hr>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            </br>
+                                            <h4 class="card-title">Awesome perks 😎 that come along</h4>
+                                            </br>
+
+                                            <ul class="list-icons">
+
+                                                <li><a href="javascript:void(0)"><i class="fa fa-check text-info"></i> Holiday travelers</a></li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-check text-info"></i> Business travelers & expats</a></li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-check text-info"></i> Single travelers, couples, families, groups </a></li>
+                                                <li><a href="javascript:void(0)"><i class="fa fa-check text-info"></i> Children & students </a></li>
+
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            </br>
+                                        <h4 class="card-title">
+                                              We also need your signature
+                                            </h4>
+                                            <div class="wrapper">
+                                                <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+
+                                            </br>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1">Accept term and conditions <a href="https://somereference.com/example_contract"> terms_conditions.docx</a></label>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            
+                                            </br>
+                                            <div class="card-toggle-body">
+                                                <div class="button-list">
+                                                    <button onclick="FnOrderConfiramtion()" type="button" class="btn btn-primary btn-block m-b-10" href="contract.html">Purchase</button>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer">
+                        <p>2019 © HackNext. - <a href="#">hacknext.de</a></p>
+                    </div>
+                </div>
+            </div>
+            </section>
+        </div>
+    </div>
+    </div>
+
+    <!-- jquery vendor -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+    <!-- nano scroller -->
+    <script src="assets/js/lib/menubar/sidebar.js"></script>
+    <script src="assets/js/lib/preloader/pace.min.js"></script>
+    <!-- sidebar -->
+
+    <!-- bootstrap -->
+
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <!-- scripit init-->
+
+    <script>
+        function FnOrderConfiramtion() {
+            console.log("You're Insured. Happy Travels");
+            alertify
+                .alert("Your bike is insured and the travel package is filled with tons of goodies for you. Happy travels and we wish you a safe bicycle experience", function() {
+                    location.href = 'transactions.html';
+                }).setHeader('Here is your insurance details');
+
+        }
+        var signaturePad = new SignaturePad(document.getElementById('signature-pad'), {
+            backgroundColor: 'rgba(255, 255, 255, 0)',
+            penColor: 'rgb(0, 0, 0)'
+        });
+        var saveButton = document.getElementById('save');
+        var cancelButton = document.getElementById('clear');
+
+        saveButton.addEventListener('click', function(event) {
+            var data = signaturePad.toDataURL('image/png');
+
+            // Send data to server instead...
+            window.open(data);
+        });
+
+        cancelButton.addEventListener('click', function(event) {
+            signaturePad.clear();
+        });
+    </script>
+
+</body>
+
+</html>
